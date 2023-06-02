@@ -1,6 +1,7 @@
-n = int(input())
-word_len = int(input())
-word = input()
+from sys import stdin
+n = int(stdin.readline().rstrip())
+word_len = int(stdin.readline().rstrip())
+word = stdin.readline().rstrip()
 check = 'I'
 for _ in range(n):
     check += 'OI'
