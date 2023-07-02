@@ -1,11 +1,16 @@
-case = int(input())
+import sys
+input=sys.stdin.readline
+a = int(input())
 
-for _ in range(case):
-    case_score = list(map(int,input().split()))
-    score_avr = sum(case_score[1:])/case_score[0]
+for j in range(a):
+    b = list(map(int,input().split()))
     count = 0
-    for i in case_score[1:]:
-        if i > score_avr:
+    sum = 0
+    for k in range(1,len(b)):
+        sum += b[k]
+    avr = sum / b[0]
+    for i in range(1,len(b)):
+        if b[i] > avr:
             count += 1
-    rate = count / case_score[0] * 100
-    print(f"{rate:.3f}%")
+    dd = count / b[0] * 100
+    print(round(dd,3),"%",sep="")
