@@ -1,12 +1,12 @@
-#include<stdio.h>
+#include <iostream>
 
-int main(void)
+using namespace std;
+
+int main()
 {
-    int a;
-    int b;
-    scanf("%d",&a);
-    scanf("%d",&b);
-    printf("%d",a-b);
-    
+    int a,b;
+    cin >> a >> b;
+    cout << a - b << endl;
+
     return 0;
 }
