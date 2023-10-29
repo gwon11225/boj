@@ -1,6 +1,7 @@
-#include<stdio.h>
+#include <iostream>
 
-int main(void)
-{
-    printf("Hello World!");
+using namespace std;
+
+int main() {
+    cout << "Hello World!" << endl;
 }
