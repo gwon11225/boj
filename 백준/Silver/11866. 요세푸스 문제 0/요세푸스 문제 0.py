@@ -1,14 +1,16 @@
+from collections import deque
+
+cnt = 0
+
+n, seq = map(int, input().split())
+
+arr = [str(i) for i in range(1, n + 1)]
+
 answer = []
 
-num, sequence = map(int, input().split())
-
-queue = [i for i in range(1, num + 1)]
-
-kill = sequence - 1
-
-for i in range(num):
-    answer.append(queue.pop(kill))
-    kill += sequence - 1
-    if len(queue) > 0 : kill %= len(queue)
-
-print(f"<" + ", ".join(list(map(str, answer))) + ">")
+for i in range(n):
+    cnt += seq - 1
+    cnt %= len(arr)
+    answer.append(arr.pop(cnt))
+    
+print("<" + ", ".join(answer) + ">")
