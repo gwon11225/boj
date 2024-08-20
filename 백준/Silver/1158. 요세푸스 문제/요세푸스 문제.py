@@ -1,10 +1,16 @@
-n, k = map(int, input().split())
-people = [i for i in range(1, n+1)]
-key = 0
-temp = k - 1
-order = []
-while people:
-    key = (key+temp) % len(people)
-    order.append(people.pop(key))
+a,b = map(int, input().split())
 
-print('<'+', '.join(map(str, order))+'>')
+arr = [i for i in range(1, a + 1)]
+
+answer = []
+
+count = 0
+
+for i in range(a):
+    for j in range(b):
+        if j == b - 1:
+            answer.append(arr.pop(0))
+        else:
+            arr.append(arr.pop(0))
+answer = map(str, answer)
+print("<" + ", ".join(answer) + ">")
