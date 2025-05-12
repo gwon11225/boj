@@ -1,5 +1,6 @@
 n = int(input())
-for i in range(n // 2, n):
+start = max(1, n - 9 * len(str(n)))
+for i in range(start, n):
     arr = list(map(int, list(str(i))))
     if i + sum(arr) == n:
         print(i)
