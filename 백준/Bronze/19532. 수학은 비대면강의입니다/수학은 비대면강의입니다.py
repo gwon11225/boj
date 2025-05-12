@@ -1,6 +1,6 @@
-ax,by,c,dx,ey,f = map(int,input().split())
-for x in range(-999,1000):
-    for y in range(-999,1000):
-        if x*ax+by*y == c and x*dx+y*ey == f:
-            print(x,y)
-            break
+a, b, c, d, e, f = map(int, input().split())
+D = a * e - b * d
+if D != 0:
+    x = (c * e - b * f) // D
+    y = (a * f - c * d) // D
+    print(x, y)
